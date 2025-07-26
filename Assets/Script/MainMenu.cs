@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Jeux"); 
+        SceneManager.LoadScene("JEUX2"); 
     }
 
     public void OpenCredits()
