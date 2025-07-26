@@ -8,12 +8,20 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController>();
+
+        if (animator == null)
+            Debug.LogError("? Animator non trouvé sur le joueur ou ses enfants !");
+        if (controller == null)
+            Debug.LogError("? CharacterController manquant sur le joueur !");
     }
 
     void Update()
     {
+        if (animator == null || controller == null)
+            return; // Stoppe l'exécution si un composant est manquant
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -22,7 +30,7 @@ public class PlayerController : MonoBehaviour
         if (direction.magnitude > 0.1f)
         {
             controller.Move(direction * speed * Time.deltaTime);
-            transform.forward = direction; // orienter le joueur
+            transform.forward = direction;
 
             animator.SetBool("isWalking", true);
         }

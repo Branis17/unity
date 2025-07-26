@@ -119,6 +119,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111620183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 916439097795205407, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+  m_PrefabInstance: {fileID: 1454981606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &111620185
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111620183}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+  m_Controller: {fileID: 9100000, guid: fa6e4151e6376be45b31ab760b2be893, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &468573761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+  m_PrefabInstance: {fileID: 1454981606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &742360727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742360728}
+  - component: {fileID: 742360729}
+  m_Layer: 0
+  m_Name: CharacterController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &742360728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742360727}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01664257, y: 0.68803, z: 3.0017984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2030480693}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742360729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742360727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be9b9a4e7d60584db3fb02fdc4bbe79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &998047788
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 998047788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7041817, y: 1.6701306, z: -10}
+  m_LocalPosition: {x: -6.718707, y: 0.8276592, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -429,11 +506,81 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fa6e4151e6376be45b31ab760b2be893, type: 2}
+    - target: {fileID: 5866666021909216657, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig6:Hips'\n\tTransform 'mixamorig6:LeftHandIndex1'\n\tTransform
+        'mixamorig6:RightForeArm'\n\tTransform 'mixamorig6:Neck'\n\tTransform 'mixamorig6:RightHandMiddle2'\n\tTransform
+        'mixamorig6:RightToeBase'\n\tTransform 'mixamorig6:RightHandMiddle3'\n\tTransform
+        'mixamorig6:LeftHandPinky2'\n\tTransform 'mixamorig6:LeftToeBase'\n\tTransform
+        'mixamorig6:RightShoulder'\n\tand more ...\n\tFrom animation clip 'Unarmed
+        Walk Forward'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 742360728}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2030480695}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2030480696}
+    - targetCorrespondingSourceObject: {fileID: 916439097795205407, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 111620185}
   m_SourcePrefab: {fileID: 100100000, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+--- !u!4 &2030480693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de641e3a4db58924babd37df3ba9f7ed, type: 3}
+  m_PrefabInstance: {fileID: 1454981606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &2030480695
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468573761}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.4
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2030480696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468573761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be9b9a4e7d60584db3fb02fdc4bbe79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
