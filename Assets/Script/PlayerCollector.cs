@@ -21,7 +21,7 @@ public class PlayerCollector : MonoBehaviour
     {
         Debug.Log("TimerText = " + (timerText != null));
         Debug.Log("CollectedText = " + (collectedText != null));
-
+        Time.timeScale = 1f;
         timer = timeLimit;
         UpdateUI();
 
@@ -49,7 +49,7 @@ public class PlayerCollector : MonoBehaviour
     {
         if (panelVictoire != null)
             panelVictoire.SetActive(true);
-        Time.timeScale = 0f; // stoppe le jeu
+        Time.timeScale = 0f; 
     }
 
     void ShowDefeatPanel()
@@ -67,7 +67,7 @@ public class PlayerCollector : MonoBehaviour
     public void MenuPrincipal()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu"); // à adapter
+        SceneManager.LoadScene("Menu"); 
     }
 
 

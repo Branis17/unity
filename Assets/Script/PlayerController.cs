@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
+
         if (direction.magnitude > 0.1f)
         {
             controller.Move(direction * speed * Time.deltaTime);
